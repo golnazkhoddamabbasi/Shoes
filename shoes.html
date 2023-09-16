@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/f24433b2e0.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(53, 53, 53, 0.712);
+            
+        }
+        header{
+            width:100%;
+            /* border: 1px solid black; */
+            height: 70px;
+            display: flex;
+            position: relative;
+
+        }
+     .head{
+     width: 50%;
+     height: 100%;
+     /* background-color: lawngreen; */
+
+  
+    
+     }
+     .head>h1{
+         width: 100%;
+         height: 100%;
+         /* background: gold; */
+         display: flex;
+         align-items: center;
+         justify-content:flex-start;
+         padding-left: 50px;
+         text-transform: uppercase;
+         color: pink
+      
+    
+     }
+
+
+     ._nav{
+         width: 50%;
+         height: 100%;
+         /* background-color: blueviolet */
+         display: flex;
+         justify-content: flex-end;
+     }
+   .ico1{
+         /* width: 100%;
+         height: 100%; */
+          /* background-color: greenyellow; */
+           display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding-right: 50px;
+          font-size: 25px; 
+          cursor: pointer;
+          /* background: green */
+          color: pink
+    
+
+     } 
+     .navbar{
+         height: 100vh;
+          
+   
+    background-color: rgb(255, 187, 210);
+           position: fixed;
+         right: 0;
+         transition: 1s;
+            transform: translateX(350px);
+            z-index: 999;
+       
+         
+     }
+    
+     .ico2{
+         font-size: 25px;
+         padding-left: 20px;
+         height: 50px;
+        
+         /* display: flex;
+         align-items: center; */
+         padding: 20px;
+         cursor: pointer;
+         /* background: blue */
+     }
+     .navbar>div>ul{
+         width: 100%;
+         height: 80vh;
+         /* background-color: blue; */
+     }
+     .navbar>div>ul>li{
+         width: 100%;
+         height: 80px;
+         /* background-color: red; */
+         list-style-type: none;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 0 50px;
+     }
+     .navbar>div>ul>li>a{
+         text-decoration: none;
+         font-size: 28px;
+         color: black
+     }
+ 
+
+     /* endd */
+     main{
+         width: 100%;
+         height: 89vh;
+         /* background-color: powderblue; */
+         position: relative;
+         display: flex;
+     }
+     .box{
+         width: 100%;
+         height: 100%;
+         /* background-color: green */
+     }
+    /* .box>i{
+        font-size: 40px;
+        cursor: pointer;
+    } */
+    .left-arrow{
+        font-size: 40px;
+        position: absolute;
+        left: 25px; 
+        transform: translateY(285px);
+        /* background: rgb(187, 39, 39); */
+        cursor: pointer;
+        color: pink;
+
+        
+    }
+.right-arrow{
+    font-size: 40px;
+    position: absolute;
+    right: 25px; 
+    transform: translateY(285px);
+    cursor: pointer; 
+    color: pink;
+}
+.box>h2{
+display: flex;
+width: 100%;
+height: 200px;
+align-items:flex-start;
+justify-content: center;
+font-size: 150px;
+opacity: 0.2;
+letter-spacing: 2px;
+/* background: fuchsia; */
+color: pink
+}
+.box>figure{
+  
+width: 500px;
+height:500px;
+position: absolute;
+z-index: 500;
+top: 11%;
+left: 25%;
+/* border: 1px solid black */
+}
+.box>figure>img{
+    width: 100%;
+    height:100%;
+    object-fit: contain;
+}
+/* endddd */
+
+
+
+    </style>
+</head>
+<body>
+  <header>
+      <div class="head">
+          <h1>shoes</h1>
+
+      </div>
+ <div class="_nav">
+        <i class="fas fa-grip-lines ico1"></i>
+      <nav class="navbar">
+            <div>
+                    <i class="fas fa-times ico2"></i>
+                    <ul>
+                        <li class="shoes1"><a href="">angel-sneakers</a></li>
+                        <li class="shoes2"><a href="">pink-canvas</a></li>
+                        <li class="shoes3"><a href="">sport-running</a></li>
+                        <li class="shoes4"><a href="">pink-high-hell</a></li>
+                    </ul> 
+            </div>
+
+        </nav>
+
+
+ </div>
+
+
+  </header>
+<!-- ennnd -->
+  <main>
+      <div class="box">
+            <i class="fas fa-chevron-left left-arrow"></i>
+            <i class="fas fa-chevron-right right-arrow"></i>
+            <h2 class="text1">angel-sneakers</h2>
+           <figure>
+                <img src="img/a.png" alt="" class="_pic"                > 
+             
+           </figure>
+
+
+      </div>
+
+
+
+
+
+  </main>
+  <!-- endddd -->
+</body> 
+<script>
+let ico1 = document.getElementsByClassName('ico1')[0] 
+let ico2 = document.getElementsByClassName('ico2')[0] 
+ let bar = document.getElementsByClassName('navbar')[0]
+
+
+ico1.addEventListener('click' ,()=>{
+        bar.style.transform= 'translateX(0)'
+    })
+    ico2.addEventListener('click',()=>{
+        bar.style.transform= 'translateX(350px)'
+    })
+    //  enddddddddd  
+let i =0
+let _image =['img/a.png','img/b.png','img/c.png','img/d.png']
+let _name =['angel-sneakers','pink-canvas','sport-running','pink-high-hell' ]
+let pic = document.querySelector('._pic')
+let text1=document.querySelector('.text1')
+2222
+pic.src =_image[i]
+text1.innerHTML=_name[i]
+
+
+let left = document.querySelector('.left-arrow')
+let right = document.querySelector('.right-arrow')
+
+
+let shoes1= document.querySelector('.shoes1')
+let shoes2= document.querySelector('.shoes2')
+let shoes3= document.querySelector('.shoes3')
+let shoes4= document.querySelector('.shoes4')
+
+
+
+shoes1.addEventListener('click',()=>{
+    i = 0;
+    pic.src = _image[i];
+    text1.innerHTML=_name[i]
+
+})
+
+shoes2.addEventListener('click',()=>{
+    i = 1;
+    pic.src = _image[i];
+    text1.innerHTML=_name[i]
+   
+})
+shoes3.addEventListener('click',()=>{
+    i = 2;
+    pic.src = _image[i];
+    text1.innerHTML=_name[i]
+   
+})
+shoes4.addEventListener('click',()=>{
+    i = 3;
+    pic.src = _image[i];
+    text1.innerHTML=_name[i]
+   
+})
+
+
+
+
+right.addEventListener('click' ,()=>{
+    if(i <_image.length-1){
+        i++
+        pic.src =_image[i]
+        text1.innerHTML=_name[i]
+       
+    }
+
+
+
+    })
+    left.addEventListener('click',()=>{
+        if(i>0){
+            i--
+        pic.src =_image[i]
+        text1.innerHTML=_name[i]
+       
+
+        }
+    })
+
+</script>
+</html>
